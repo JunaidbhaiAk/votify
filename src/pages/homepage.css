@@ -1,0 +1,50 @@
+.card-with-gradient-border {
+  position: relative;
+  border: none;
+}
+
+.card-with-gradient-border::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  z-index: -1;
+  background-image: linear-gradient(to bottom right, #1890ff, #0050b3);
+  border-radius: 6px;
+}
+
+.pc {
+  border: 2px outset rgba(96, 196, 230, 1);
+}
+
+.land_img {
+  animation: monitorIn 2s forwards;
+}
+
+.land_info {
+  animation: monitorOut 2s backwards 2s;
+}
+
+@keyframes monitorIn {
+  from {
+    transform: translateX(-130px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes monitorOut {
+  from {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
